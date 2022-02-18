@@ -14,7 +14,7 @@ font-family: monospace; font-size: 3rem;">
     <% boolean invNumberFlag = false;
         int x = 111111111;
         int y = 111111111;
-        String regex = "[0-9]+";
+        String regex = "-?[0-9]+";
         %>
        <% if (Pattern.matches(regex,request.getParameter("p1"))) {
         x = Integer.parseInt(request.getParameter("p1"));}
@@ -54,7 +54,7 @@ font-family: monospace; font-size: 3rem;">
 
     %>
     <% if ("null".equals(operator)) {
-        out.println("Invalid operator request.");
+        out.println("Operator request is invalid.");
         invOperatorFlag = true;
     }
     %>
