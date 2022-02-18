@@ -19,12 +19,12 @@ font-family: monospace; font-size: 3rem;">
        <% if (Pattern.matches(regex,request.getParameter("p1"))) {
         x = Integer.parseInt(request.getParameter("p1"));}
         else {invNumberFlag = true;
-        out.println("First operand is not a number, try again.");}
+        out.println("First operand is invalid.");}
 
         if (Pattern.matches(regex,request.getParameter("p2"))) {
         y = Integer.parseInt(request.getParameter("p2")); }
         else {invNumberFlag = true;
-            out.println("Second operand is not a number, try again.");}
+            out.println("Second operand is invalid.");}
 
         int res = 0;
 
@@ -54,7 +54,7 @@ font-family: monospace; font-size: 3rem;">
 
     %>
     <% if ("null".equals(operator)) {
-        out.println("Invalid operator request, please try again.");
+        out.println("Invalid operator request.");
         invOperatorFlag = true;
     }
     %>
