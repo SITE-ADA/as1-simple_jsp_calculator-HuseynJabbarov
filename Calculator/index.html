@@ -34,13 +34,13 @@ font-family: monospace; font-size: 2.5rem;">
 <div class="calculator" style="display: block;">
     <form action="./home.jsp" method="POST"> 
         <div class="operator oper"> 
-            Choose the function(sum,mul,sub,div): <input type="text" name="op" class="input" />
+            Choose the function(sum,mul,sub,div): <input type="text" name="op" class="input" required />
         </div>
         <div class="firstOperand oper">
-            First operand: <input type="text" name="p1" class="input" />
+            First operand: <input type="text" name="p1" class="input" required/>
         </div>
         <div class="secondOperand oper">
-            Second operand: <input type="text" name="p2" class="input"/>
+            Second operand: <input type="text" name="p2" class="input" required/>
         </div>
         <div class="submitButton">
             <input type="submit" style="background-color:rgb(176, 255, 193); border-radius: 0.5rem; color: rgb(0, 0, 0); width: 6rem; height: 2rem; font-size: 1.2rem;"  value="=" />
