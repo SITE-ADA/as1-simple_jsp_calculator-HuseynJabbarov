@@ -16,17 +16,19 @@ font-family: monospace; font-size: 2.5rem;">
             margin: auto;
             background-color: rgb(167, 228, 167);
             border-radius: 0.5rem;
-            padding: 1rem;
+            padding: 1.5rem;
             width: 75%;
         }
 
         .input {
             padding: 0.4rem;
-            width: 15%;
-            height: 2rem;
-            font-size: 1.5rem;
+            width: 10%;
+            height: 2.2rem;
+            font-size: 1.1rem;
             border-radius: 0.2em;
             background-color: rgb(217, 255, 230);
+            text-align: center;
+            font-weight: 700;
         }
 
         .oper {
@@ -40,7 +42,14 @@ font-family: monospace; font-size: 2.5rem;">
     <div class="calculator" style="display: block;">
         <form action="./home.jsp" method="POST">
             <div class="operator oper">
-                Choose the function(sum,mul,sub,div): <input type="text" name="op" class="input" required />
+                Choose operator:
+                <select name="op" class="input" required>
+                    <option selected disabled>...</option>
+                    <option value="add">Add</option>
+                    <option value="mul">Multiply</option>
+                    <option value="sub">Subtract</option>
+                    <option value="div">Divide</option>
+                </select>
             </div>
             <div class="firstOperand oper">
                 First operand: <input type="text" name="p1" class="input" required />

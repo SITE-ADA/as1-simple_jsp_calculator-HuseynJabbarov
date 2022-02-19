@@ -33,7 +33,21 @@ font-family: monospace; font-size: 2.5rem;">
 <div class="userInfo" style="display: block;">
      <div class="os">
       <%
-      String userOs = System.getProperty("os.name");
+  
+        String userOs = "Unknown OS";
+        String OS = request.getHeader("user-agent");
+        if (OS.indexOf("Win") != -1) {
+            userOs = "Windows";
+        }
+        if (OS.indexOf("Mac") != -1) {
+            userOs = "MacOS";
+        }
+        if (OS.indexOf("X11") != -1) {
+            userOs = "UNIX";
+        }
+        if (OS.indexOf("Linux") != -1) {
+            userOs = "Linux";
+        }
       out.println("Your operating system: " + userOs);
       %>
      </div>
@@ -60,7 +74,7 @@ font-family: monospace; font-size: 2.5rem;">
         else {
         userBrowser = "Some unpopular browser :D";
         }
-        out.println("Your browser: " +userBrowser);
+        out.println("Your browser: " + userBrowser);
         %>
      </div>
 
