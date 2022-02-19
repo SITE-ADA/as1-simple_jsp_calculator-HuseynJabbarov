@@ -12,34 +12,34 @@
 text-align: center; padding-top: 10rem;
 font-family: monospace; font-size: 2.5rem;">
 <style>
-    .calculator{
+    .userInfo{
         margin: auto;
         background-color: rgb(167, 228, 167);
         border-radius: 0.5rem;
         padding: 1rem;
         width: 75%;
     }
-    .input{
-        padding: 0.4rem;
-        width: 15%;
-        height: 2rem;
-        font-size: 1.5rem;
-        border-radius: 0.2em;
-        background-color: rgb(217, 255, 230);
-    }
-    .oper {
+    .os {
         padding: 1rem;
+    }
+    .browser {
+        padding: 1rem;
+    }
+    .calculatorLink {
+        padding: 4rem;
     }
 </style>
 
-<div class="calculator" style="display: block;">
+<div class="userInfo" style="display: block;">
      <div class="os">
       <%
       String userOs = System.getProperty("os.name");
       out.println("Your operating system: " + userOs);
       %>
-    </div>
-      <%
+     </div>
+
+     <div class="browser">
+        <%
         String userBrowser = "";
         String browser = request.getHeader("user-agent");
         if (browser.indexOf("MSIE") != -1) {
@@ -61,11 +61,12 @@ font-family: monospace; font-size: 2.5rem;">
         userBrowser = "Some unpopular browser :D";
         }
         out.println("Your browser: " +userBrowser);
- %>
+        %>
+     </div>
 
- </div>
+    
 </div>
-    <div>
+    <div class="calculatorLink">
         <a href="./index.html" target="_self" style="text-decoration: none;">&#x2190 Calculator</a>
     </div>
 </body>

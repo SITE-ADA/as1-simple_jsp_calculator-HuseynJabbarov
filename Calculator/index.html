@@ -11,45 +11,53 @@
 <body style="background-color: darkseagreen;
 text-align: center; padding-top: 10rem;
 font-family: monospace; font-size: 2.5rem;">
-<style>
-    .calculator{
-        margin: auto;
-        background-color: rgb(167, 228, 167);
-        border-radius: 0.5rem;
-        padding: 1rem;
-        width: 75%;
-    }
-    .input{
-        padding: 0.4rem;
-        width: 15%;
-        height: 2rem;
-        font-size: 1.5rem;
-        border-radius: 0.2em;
-        background-color: rgb(217, 255, 230);
-    }
-    .oper {
-        padding: 1rem;
-    }
-</style>
-<div class="calculator" style="display: block;">
-    <form action="./home.jsp" method="POST"> 
-        <div class="operator oper"> 
-            Choose the function(sum,mul,sub,div): <input type="text" name="op" class="input" required />
-        </div>
-        <div class="firstOperand oper">
-            First operand: <input type="text" name="p1" class="input" required/>
-        </div>
-        <div class="secondOperand oper">
-            Second operand: <input type="text" name="p2" class="input" required/>
-        </div>
-        <div class="submitButton">
-            <input type="submit" style="background-color:rgb(176, 255, 193); border-radius: 0.5rem; color: rgb(0, 0, 0); width: 6rem; height: 2rem; font-size: 1.2rem;"  value="=" />
-        </div>
-    </form>
-</div>
-<div class="report">
-    <a href="./report.jsp" style="text-decoration: none;"> Info about the client &#x2192</a>
-</div>
+    <style>
+        .calculator {
+            margin: auto;
+            background-color: rgb(167, 228, 167);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            width: 75%;
+        }
+
+        .input {
+            padding: 0.4rem;
+            width: 15%;
+            height: 2rem;
+            font-size: 1.5rem;
+            border-radius: 0.2em;
+            background-color: rgb(217, 255, 230);
+        }
+
+        .oper {
+            padding: 1rem;
+        }
+
+        .report {
+            padding: 4rem;
+        }
+    </style>
+    <div class="calculator" style="display: block;">
+        <form action="./home.jsp" method="POST">
+            <div class="operator oper">
+                Choose the function(sum,mul,sub,div): <input type="text" name="op" class="input" required />
+            </div>
+            <div class="firstOperand oper">
+                First operand: <input type="text" name="p1" class="input" required />
+            </div>
+            <div class="secondOperand oper">
+                Second operand: <input type="text" name="p2" class="input" required />
+            </div>
+            <div class="submitButton">
+                <input type="submit"
+                    style="background-color:rgb(176, 255, 193); border-radius: 0.5rem; color: rgb(0, 0, 0); width: 6rem; height: 2rem; font-size: 1.2rem;"
+                    value="=" />
+            </div>
+        </form>
+    </div>
+    <div class="report">
+        <a href="./report.jsp" style="text-decoration: none;"> Info about the client &#x2192</a>
+    </div>
 </body>
 
 </html>
