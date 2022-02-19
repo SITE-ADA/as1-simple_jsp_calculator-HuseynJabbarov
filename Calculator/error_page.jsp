@@ -7,7 +7,7 @@
     <body style="background-color: lightgray; color: black;
         text-align: center; padding-top: 10rem;
         font-family: monospace; font-size: 2rem;">
-        How did you manage to get an error? Anyway here it is:
+        An error occured:
         <br>
        <div style="padding: 4rem; color: red;"> Error: <%= exception %> </div>
         <br> <div style="margin-top:4rem;">
