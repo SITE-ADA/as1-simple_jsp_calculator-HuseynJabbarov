@@ -67,7 +67,7 @@ font-family: monospace; font-size: 3rem;">
     }%></p>
 </div>
 <div>
-    <a href="./index.html" target="_self" style="text-decoration: none;">Try again</a>
+    <a href="./index.html" target="_self" style="text-decoration: none;">&#8635 Try again</a>
 </div>
 </body>
 </html>
